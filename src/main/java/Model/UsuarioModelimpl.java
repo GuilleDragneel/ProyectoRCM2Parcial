@@ -43,12 +43,12 @@ public class UsuarioModelimpl implements IUsuarioModel {
     }
 
     @Override
-    public void eliminarRegistro(Usuario usuario) {
+    public void eliminarRegistro(int idUsuario) {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             s = sf.openSession();
             s.beginTransaction();
-            s.delete(usuario);
+            s.delete(idUsuario);
             s.getTransaction().commit();
             s.close();
             sf.close();

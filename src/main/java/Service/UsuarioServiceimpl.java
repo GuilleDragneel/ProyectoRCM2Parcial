@@ -5,7 +5,7 @@ import Model.IUsuarioModel;
 import Model.UsuarioModelimpl;
 import java.util.List;
 
-public class UsuarioServiceimpl {
+public class UsuarioServiceimpl implements IUsuarioService {
 
     IUsuarioModel modelo = new UsuarioModelimpl();
 
@@ -17,8 +17,8 @@ public class UsuarioServiceimpl {
         modelo.actualizarRegistro(usuario);
     }
 
-    public void eliminarRegistro(Usuario usuario) {
-        modelo.eliminarRegistro(usuario);
+    public void eliminarRegistro(int idUsuario) {
+        modelo.eliminarRegistro(idUsuario);
     }
 
     public List<Usuario> obtenerRegistros() {
