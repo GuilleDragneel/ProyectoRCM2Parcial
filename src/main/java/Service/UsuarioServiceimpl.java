@@ -9,16 +9,18 @@ public class UsuarioServiceimpl implements IUsuarioService {
 
     IUsuarioModel modelo = new UsuarioModelimpl();
 
+    @Override
     public void crearRegistro(Usuario usuario) {
         modelo.crearRegistro(usuario);
     }
 
+    @Override
     public void actualizarRegistro(Usuario usuario) {
         modelo.actualizarRegistro(usuario);
     }
 
-    public void eliminarRegistro(int idUsuario) {
-        modelo.eliminarRegistro(idUsuario);
+    public void eliminarRegistro(Usuario usuario) {
+        modelo.eliminarRegistro(usuario);
     }
 
     public List<Usuario> obtenerRegistros() {
@@ -28,4 +30,5 @@ public class UsuarioServiceimpl implements IUsuarioService {
     public Usuario obtenerRegistro(int idUsuario) {
         return modelo.obtenerRegistro(idUsuario);
     }
+
 }

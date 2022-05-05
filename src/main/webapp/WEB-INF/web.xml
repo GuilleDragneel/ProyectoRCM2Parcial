@@ -12,6 +12,10 @@
         <servlet-name>EliminarUsuarioServlet</servlet-name>
         <servlet-class>Controller.EliminarUsuarioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarUsuarioServlet</servlet-name>
+        <servlet-class>Controller.ListarUsuarioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CrearUsuarioServlet</servlet-name>
         <url-pattern>/CrearUsuarioServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>EliminarUsuarioServlet</servlet-name>
         <url-pattern>/EliminarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarUsuarioServlet</servlet-name>
+        <url-pattern>/ListarUsuarioServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

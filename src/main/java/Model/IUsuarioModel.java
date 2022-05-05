@@ -9,7 +9,7 @@ public interface IUsuarioModel {
 
     public void actualizarRegistro(Usuario usuario);
 
-    public void eliminarRegistro(int idUsuario);
+    public void eliminarRegistro(Usuario usuario);
 
     public List<Usuario> obtenerRegistros();
 

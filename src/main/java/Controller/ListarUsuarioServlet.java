@@ -3,21 +3,23 @@ package Controller;
 import Entity.Usuario;
 import Service.IUsuarioService;
 import Service.UsuarioServiceimpl;
-import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
-public class EditarUsuarioServlet extends HttpServlet {
+public class ListarUsuarioServlet extends HttpServlet {
 
-    UsuarioServiceimpl service;
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Usuario usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("idUsuario1")));
-        request.setAttribute("usuario", usuario);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ActualizarUsu.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ListarUsuarios.jsp");
+        UsuarioServiceimpl service = new UsuarioServiceimpl();
+        List<Usuario> ListaUsuario = service.obtenerRegistros();
+        System.out.println("lista: " + ListaUsuario.size());
+        request.setAttribute("ListaUsuario", ListaUsuario);
         dispatcher.forward(request, response);
     }
 

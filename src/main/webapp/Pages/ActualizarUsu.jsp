@@ -1,9 +1,14 @@
+<%-- 
+    Document   : ActualizarUsu
+    Created on : 5 may 2022, 11:01:23
+    Author     : labso03
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="../Resources/EstiloMenu.css"> -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8, initial-scale=1.0">
         <script src="../Resourses/EstiloMenu.js"></script>  
         <link rel="Stylesheet" href="../webjars/bootstrap/5.1.3/css/bootstrap.min.css">
         <script src="../webjars/jquery/3.6.0/dist/jquery.min.js"></script> 

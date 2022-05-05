@@ -23,7 +23,7 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear al registro" + e.getMessage());
+            System.out.println("Error al crear registro " + e.getMessage());
         }
     }
 
@@ -38,22 +38,22 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al modificar el registro" + e.getMessage());
+            System.out.println("Error al actualizar registro " + e.getMessage());
         }
     }
 
     @Override
-    public void eliminarRegistro(int idUsuario) {
+    public void eliminarRegistro(Usuario usuario) {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             s = sf.openSession();
             s.beginTransaction();
-            s.delete(idUsuario);
+            s.delete(usuario);
             s.getTransaction().commit();
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al eliminar el registro" + e.getMessage());
+            System.out.println("Error al eliminar registro " + e.getMessage());
         }
     }
 
@@ -67,7 +67,7 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear al registro" + e.getMessage());
+            System.out.println("Error al obtener registros " + e.getMessage());
         }
         return listaUsuario;
     }
@@ -82,7 +82,7 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear al registro" + e.getMessage());
+            System.out.println("Error al obtener resgistro " + e.getMessage());
         }
         return usuario;
     }
