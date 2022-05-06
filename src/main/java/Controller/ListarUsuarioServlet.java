@@ -1,7 +1,6 @@
 package Controller;
 
 import Entity.Usuario;
-import Service.IUsuarioService;
 import Service.UsuarioServiceimpl;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
