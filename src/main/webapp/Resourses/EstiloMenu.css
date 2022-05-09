@@ -1,1 +1,114 @@
 #success_message{ display: none;}
+.header{
+    color: #ffffff;
+    padding: 15px;
+    font-family: Helvetica;
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+.bodys{
+    aling: center;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #E6B68B;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#menu li>a{
+    background-color: #97572B;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+}
+#menu li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+}
+#menu>li{
+    float: left;
+    text-align:center
+}
+#menu>li>ul{
+    display: none;
+}
+#menu>li:hover>ul {
+    display:block;
+}
+h1.principal{
+    font-family: "Sans-serif";
+}
+section.forma{
+    width: 70%;
+    margin: auto;
+    padding: 0px 10px;
+    background-color: #000;
+}
+section.forma_registro{
+    width: 70%;
+    margin: auto;
+    padding: 0px 10px;
+    background-color: #F2D2B3;
+}
+/*Estilo tabla*/
+section.forma_tabla{
+    width: 70%;
+    margin: auto;
+    padding: 0px 10px;
+    background-color: #FFAE6A;
+}
+table tr:hover {
+    background: #F2EADC;
+    cursur: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #F2EADC;
+}
+/*Esctilo Button*/
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #EEC170;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9x #999;
+}
+
+.button:hover {
+    background-color: #FFAE6A;
+}
+
+.button:active {
+    background-color: #F2EADC;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
