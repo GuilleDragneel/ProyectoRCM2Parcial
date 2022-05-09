@@ -19,7 +19,7 @@ public class Usuario implements Serializable {
     private Integer codigo;
     @Column(name = "nombre_usuario", length = 20, nullable = true)
     private String nombreUsuario;
-    @Column(name = "contrase\u00f1a", length = 20, nullable = true)
+    @Column(name = "contraseña", length = 20, nullable = true)
     private String contraseña;
     @Column(name = "nombre", length = 20, nullable = true)
     private String nombre;

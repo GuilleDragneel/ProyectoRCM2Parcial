@@ -4,6 +4,7 @@ import Entity.Usuario;
 import Service.IUsuarioService;
 import Service.UsuarioServiceimpl;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,13 +13,109 @@ import javax.servlet.http.HttpServletResponse;
 
 public class EditarUsuarioServlet extends HttpServlet {
 
-    UsuarioServiceimpl service;
+    IUsuarioService service;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Usuario usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("idUsuario1")));
-        request.setAttribute("usuario", usuario);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ActualizarUsu.jsp");
+        String action = request.getParameter("action");
+        System.out.println("Action: " + action);
+        switch (action) {
+            case "editar":
+                System.out.println("Editando...");
+                editar(request, response);
+                break;
+            case "actualizar":
+                System.out.println("Actualizar...");
+                actualizar(request, response);
+                break;
+            case "listar":
+                System.out.println("Listando...");
+                listar(request, response);
+                break;
+            case "crear":
+                System.out.println("Creando...");
+                crearusu(request, response);
+                break;
+            case "crearfor":
+                System.out.println("Creando...");
+                crearfor(request, response);
+                break;
+            case "eliminar":
+                System.out.println("Eliminando...");
+                eliminar(request, response);
+                break;
+        }
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
+    protected void actualizar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(request.getParameter("id"));
+        Usuario usu = new Usuario(Integer.parseInt(request.getParameter("id")));
+        usu.setNombreUsuario(request.getParameter("nombreusu"));
+        usu.setNombre(request.getParameter("nombre"));
+        usu.setContraseña(request.getParameter("contraseña"));
+        usu.setSexo(request.getParameter("sexo"));
+        usu.setEdad(Integer.parseInt(request.getParameter("edad")));
+        service = new UsuarioServiceimpl();
+        service.actualizarRegistro(usu);
+        System.out.println("Ingresado: " + usu.getNombre());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("ListarUsuarioServlet");
+        dispatcher.forward(request, response);
+        this.service = new UsuarioServiceimpl();
+        List<Usuario> ListaUsuario = this.service.obtenerRegistros();
+        request.setAttribute("ListaUsuario", ListaUsuario);
         dispatcher.forward(request, response);
     }
 
+    protected void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ActualizarUsu.jsp");
+        Usuario usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("codigo")));
+        request.setAttribute("usuario", usuario);
+        dispatcher.forward(request, response);
+    }
+
+    protected void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ListarUsuarios.jsp");
+        UsuarioServiceimpl service = new UsuarioServiceimpl();
+        List<Usuario> ListaUsuario = service.obtenerRegistros();
+        System.out.println("lista: " + ListaUsuario.size());
+        request.setAttribute("ListaUsuario", ListaUsuario);
+        dispatcher.forward(request, response);
+    }
+
+    protected void crearfor(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/Crearusu.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    protected void crearusu(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        service = new UsuarioServiceimpl();
+        Usuario u = new Usuario();
+        u.setNombreUsuario(request.getParameter("nombreUsuario"));
+        u.setContraseña(request.getParameter("nombreUsuario"));
+        u.setNombre(request.getParameter("nombre"));
+        u.setSexo(request.getParameter("sexo"));
+        u.setEdad(Integer.parseInt(request.getParameter("edad")));
+        service = new UsuarioServiceimpl();
+        service.crearRegistro(u);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("EditarUsuarioServlet?action=listar");
+        dispatcher.forward(request, response);
+        this.service = new UsuarioServiceimpl();
+        List<Usuario> ListaUsuario = this.service.obtenerRegistros();
+        request.setAttribute("ListaUsuario", ListaUsuario);
+        dispatcher.forward(request, response);
+    }
+
+    protected void eliminar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ListarUsuarios.jsp");
+        this.service = new UsuarioServiceimpl();
+        Usuario usuario = new Usuario();
+        usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("idUsuario")));
+        service.eliminarRegistro(usuario);
+        List<Usuario> ListaUsuario = this.service.obtenerRegistros();
+        request.setAttribute("ListaUsuario", ListaUsuario);
+        dispatcher.forward(request, response);
+    }
 }

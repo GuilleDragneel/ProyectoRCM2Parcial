@@ -74,16 +74,16 @@ public class UsuarioModelimpl implements IUsuarioModel {
 
     @Override
     public Usuario obtenerRegistro(int idUsuario) {
-        Usuario usuario = null;
         try {
             sf = new Configuration().configure().buildSessionFactory();
             s = sf.openSession();
-            usuario = s.get(Usuario.class, idUsuario);
+            Usuario usuario = (Usuario) s.get(Usuario.class, idUsuario);
             s.close();
             sf.close();
+            return usuario;
         } catch (HibernateException e) {
             System.out.println("Error al obtener resgistro " + e.getMessage());
         }
-        return usuario;
+        return null;
     }
 }

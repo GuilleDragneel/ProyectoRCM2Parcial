@@ -1,14 +1,21 @@
+<%-- 
+    Document   : Crearusu
+    Created on : 9 may 2022, 16:05:32
+    Author     : labso03
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="../Resources/EstiloMenu.css"> -->
-        <script src="../Resourses/EstiloMenu.js"></script>  
-        <link rel="Stylesheet" href="../webjars/bootstrap/5.1.3/css/bootstrap.min.css">
-        <script src="../webjars/jquery/3.6.0/dist/jquery.min.js"></script> 
-        <script src="../webjars/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
-        <link rel="Stylesheet" href="../webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="Resourses/EstiloMenu.js"></script>  
+        <link rel="Stylesheet" href="webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+        <script src="webjars/jquery/3.6.0/dist/jquery.min.js"></script> 
+        <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
+        <link rel="Stylesheet" href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
+
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
@@ -36,14 +43,11 @@
                                 <li><a class="dropdown-item" href="../ListarUsuarioServlet"">Eliminar</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acercade..</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <form action="../CrearUsuarioServlet" method="POST">
+        <form action="EditarUsuarioServlet?action=crear" method="POST">
             <div class="container-md">
                 <div class="mb-3">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -86,5 +90,5 @@
                 <button class="summit" class="btn btn-primary" >Crear</button>
             </div>
         </form>
-    </body>
+    </body> 
 </html>

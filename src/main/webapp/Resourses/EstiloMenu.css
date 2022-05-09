@@ -1,6 +1,8 @@
-#success_message{ display: none;}
+#success_message{
+    display: none;
+}
 .header{
-    color: #ffffff;
+    color: #fff;
     padding: 15px;
     font-family: Helvetica;
     width: 680px;
@@ -16,7 +18,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: #E6B68B;
+    background-image: #fff url(images/mochi.jpg);
     background-size: cover;
     font-family: 'Lato', sans-serif;
 }
@@ -28,7 +30,7 @@ ul{
     list-style: none;
 }
 #menu li>a{
-    background-color: #97572B;
+    background-color: #245c85;
     color: white;
     padding: 10px;
     display: block;
@@ -37,7 +39,7 @@ ul{
 }
 #menu li>a:hover{
     color: #000;
-    background-color: #eaeaea;
+    background-color: #00e5e5;
 }
 #menu>li{
     float: left;
@@ -62,17 +64,17 @@ section.forma_registro{
     width: 70%;
     margin: auto;
     padding: 0px 10px;
-    background-color: #F2D2B3;
+    background-color: #00e5e5;
 }
 /*Estilo tabla*/
 section.forma_tabla{
     width: 70%;
     margin: auto;
     padding: 0px 10px;
-    background-color: #FFAE6A;
+    background-color: #b3a1f0;
 }
 table tr:hover {
-    background: #F2EADC;
+    background: #00e5e5;
     cursur: pointer;
 }
 table {
@@ -108,7 +110,7 @@ tr:nth-child(even) {
 }
 
 .button:active {
-    background-color: #F2EADC;
+    background-color: #fff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }

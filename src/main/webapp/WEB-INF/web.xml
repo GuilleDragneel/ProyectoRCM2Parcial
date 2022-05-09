@@ -16,6 +16,10 @@
         <servlet-name>ListarUsuarioServlet</servlet-name>
         <servlet-class>Controller.ListarUsuarioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActualizarServlet</servlet-name>
+        <servlet-class>Controller.ActualizarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CrearUsuarioServlet</servlet-name>
         <url-pattern>/CrearUsuarioServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ListarUsuarioServlet</servlet-name>
         <url-pattern>/ListarUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarServlet</servlet-name>
+        <url-pattern>/ActualizarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
