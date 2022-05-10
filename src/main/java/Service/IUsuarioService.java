@@ -1,3 +1,9 @@
+/*
+    Autor= Guillermo Daniel Cruz Ortega
+    Fecha creacion= 19/04/2022
+    Fecha actualizacion= 10/05/2022
+    Descripcion= Clase usuario IUsuarioService
+ */
 package Service;
 
 import Entity.Usuario;

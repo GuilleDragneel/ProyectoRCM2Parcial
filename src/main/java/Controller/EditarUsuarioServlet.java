@@ -1,3 +1,9 @@
+/*
+    Autor= Guillermo Daniel Cruz Ortega
+    Fecha creacion= 19/04/2022
+    Fecha actualizacion= 10/05/2022
+    Descripcion= Servlet que contiene todos los metodos para la manipulacion de usuarios
+ */
 package Controller;
 
 import Entity.Usuario;
@@ -16,6 +22,7 @@ public class EditarUsuarioServlet extends HttpServlet {
     IUsuarioService service;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("holaaaaaaaaaaaaaaa");
         String action = request.getParameter("action");
         System.out.println("Action: " + action);
         switch (action) {
@@ -51,9 +58,9 @@ public class EditarUsuarioServlet extends HttpServlet {
     }
 
     protected void actualizar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println(request.getParameter("id"));
-        Usuario usu = new Usuario(Integer.parseInt(request.getParameter("id")));
-        usu.setNombreUsuario(request.getParameter("nombreusu"));
+        System.out.println(request.getParameter("codigo"));
+        Usuario usu = new Usuario(Integer.parseInt(request.getParameter("codigo")));
+        usu.setNombreUsuario(request.getParameter("nombreUsuario"));
         usu.setNombre(request.getParameter("nombre"));
         usu.setContraseña(request.getParameter("contraseña"));
         usu.setSexo(request.getParameter("sexo"));
@@ -61,7 +68,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         service = new UsuarioServiceimpl();
         service.actualizarRegistro(usu);
         System.out.println("Ingresado: " + usu.getNombre());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("ListarUsuarioServlet");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("EditarUsuarioServlet?action=listar");
         dispatcher.forward(request, response);
         this.service = new UsuarioServiceimpl();
         List<Usuario> ListaUsuario = this.service.obtenerRegistros();
@@ -80,7 +87,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ListarUsuarios.jsp");
         UsuarioServiceimpl service = new UsuarioServiceimpl();
         List<Usuario> ListaUsuario = service.obtenerRegistros();
-        System.out.println("lista: " + ListaUsuario.size());
+        //System.out.println("lista: " + ListaUsuario.size());
         request.setAttribute("ListaUsuario", ListaUsuario);
         dispatcher.forward(request, response);
     }
@@ -112,7 +119,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/ListarUsuarios.jsp");
         this.service = new UsuarioServiceimpl();
         Usuario usuario = new Usuario();
-        usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("idUsuario")));
+        usuario = this.service.obtenerRegistro(Integer.parseInt(request.getParameter("codigo")));
         service.eliminarRegistro(usuario);
         List<Usuario> ListaUsuario = this.service.obtenerRegistros();
         request.setAttribute("ListaUsuario", ListaUsuario);

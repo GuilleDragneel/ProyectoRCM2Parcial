@@ -1,3 +1,9 @@
+/*
+    Autor= Guillermo Daniel Cruz Ortega
+    Fecha creacion= 19/04/2022
+    Fecha actualizacion= 10/05/2022
+    Descripcion= Estilos css de tablas y body
+ */
 #success_message{
     display: none;
 }
@@ -18,8 +24,9 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: #fff url(images/mochi.jpg);
-    background-size: cover;
+    position: relative;
+    margin-bottom: 40px;
+    background-image: url("images/mochi.jpg");
     font-family: 'Lato', sans-serif;
 }
 *{

@@ -2,6 +2,7 @@
     Document   : ListarUsuarios
     Created on : 5 may 2022, 9:49:57
     Author     : Guiller
+    Description : Pagina donde se listan los usuarios
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -28,24 +29,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">The Cat</a>
+                            <a class="nav-link active" aria-current="page" href="Pages/Index.html">The Cat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Index.html">Inicio</a>
+                            <a class="nav-link" href="Pages/Index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Usuario
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/CrearUsuario.html">Crear</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet">Listar</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet"">Editar</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet"">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=crearfor">Crear</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Listar</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Editar</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Eliminar</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Acercade..</a>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +71,7 @@
                         <td> <c:out value="${usuario.sexo}"></c:out></td>
                         <td> <c:out value="${usuario.edad}"></c:out></td>
                         <th><a href="EditarUsuarioServlet?action=editar&codigo=<c:out value="${usuario.codigo}"></c:out>">Editar</a></th>
-                        <th><a href="EditarUsuarioServlet?action=eliminar&codigo=<c:out value="${usuario.codigo} "></c:out>">Eliminar</a></th>
+                        <th><a href="EditarUsuarioServlet?action=eliminar&codigo=<c:out value="${usuario.codigo}"></c:out>">Eliminar</a></th>
                         </tr>
                 </c:forEach>
             </tbody>

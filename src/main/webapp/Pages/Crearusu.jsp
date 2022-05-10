@@ -2,6 +2,7 @@
     Document   : Crearusu
     Created on : 9 may 2022, 16:05:32
     Author     : labso03
+    Description : Pagina de creación de usuario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,20 +28,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">The Cat</a>
+                            <a class="nav-link active" aria-current="page" href="Pages/Index.html">The Cat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Index.html">Inicio</a>
+                            <a class="nav-link" href="Pages/Index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Usuario
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="CrearUsuario.html">Crear</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet">Listar</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet"">Editar</a></li>
-                                <li><a class="dropdown-item" href="../ListarUsuarioServlet"">Eliminar</a></li>
+                                
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=crearfor">Crear</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Listar</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Editar</a></li>
+                                <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Eliminar</a></li>
                             </ul>
                         </li>
                     </ul>
