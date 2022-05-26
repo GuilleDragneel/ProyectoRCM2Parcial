@@ -48,11 +48,12 @@
             </div>
         </nav>
         <form action="EditarUsuarioServlet?action=actualizar" method="POST">
-            <div class="container-md">
-                <div class="mb-3">
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <label for="exampleInputEmail1" class="form-label">Nombre Usuario</label>
-                    <input name="nombreUsuario" value="<c:out value="${usuario.nombreUsuario}"></c:out>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
+            <input name="codigo" type="hidden" value="<c:out value="${usuario.codigo}"></c:out>">  
+                <div class="container-md">
+                    <div class="mb-3">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <label for="exampleInputEmail1" class="form-label">Nombre Usuario</label>
+                        <input name="nombreUsuario" value="<c:out value="${usuario.nombreUsuario}"></c:out>" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
                         <div id="usuarioname" class="form-text">Solo letras y numeros</div>
                     </div>
                     <div class="mb-3">
