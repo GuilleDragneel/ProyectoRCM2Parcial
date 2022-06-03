@@ -3,7 +3,6 @@
     Fecha creacion= 19/04/2022
     Fecha actualizacion= 10/05/2022
     Descripcion= Clase usuario y metodos get y set
-nm7bS3k%chNKvY!#7&Pi
  */
 package Entity;
 
