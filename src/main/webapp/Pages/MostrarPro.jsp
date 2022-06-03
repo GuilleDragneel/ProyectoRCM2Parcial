@@ -49,73 +49,91 @@
                 </div>
             </div>
         </nav>
+        <br>
         <div class="container">
             <div class="row align-items-start">
-
             </div>
             <div class="row align-items-center">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/albondigon.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Albondigon</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Agregar</a>
+                <form action="EditarUsuarioServlet?action=crearPedi" method="POST">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="Resourses/images/albondigon.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 name="nombreprod" class="card-title">Albondigon</h5>
+                                    <p name="descripcion" class="card-text">Carne molida extendida y enrollada en forma cilíndrica con relleno de huevo y verduras en su interios.</p>
+                                    <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                                    <input name="edad" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="20" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Agregar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/Spagetti.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Spagetti</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Agregar</a>
+                </form>
+                <form action="EditarUsuarioServlet?action=crearPedi" method="POST">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="Resourses/images/Spagetti.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 name="nombreprod" class="card-title">Spagetti</h5>
+                                    <p name="descripcion" class="card-text">Pasta italiana elaborada con harina de grano duro y agua, acompañada de salsa echa a base de tomate y especias. </p>
+                                    <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                                    <input name="edad" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="20" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Agregar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img Src="Resourses/images/Lasaña.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Lasaña</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Agregar</a>
+                </form>
+                <form action="EditarUsuarioServlet?action=crearPedi" method="POST">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img Src="Resourses/images/Lasaña.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 name="nombreprod" class="card-title">Lasaña</h5>
+                                    <p name="descripcion" class="card-text">Pasta en láminas intercaladas con carne y conbechamel y abundante queso rallado gratinado al horno.</p>
+                                    <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                                    <input name="edad" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="20" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Agregar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/PastaVerde.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Spagetti Verde</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Agregar</a>
+                </form>
+                <form action="EditarUsuarioServlet?action=crearPedi" method="POST">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="Resourses/images/PastaVerde.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 name="nombreprod" class="card-title">Spagetti Verde</h5>
+                                    <p name="descripcion" class="card-text">Pasta italiana elaborada con harina de grano duro y agua, acompañada de salsa echa a base de verde y cremas</p>
+                                    <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                                    <input name="cantidad" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="20" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Agregar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="row align-items-end">
-
             </div>
         </div>
-
     </body>
 </html>
 

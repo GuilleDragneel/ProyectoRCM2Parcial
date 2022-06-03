@@ -53,6 +53,10 @@ public class EditarUsuarioServlet extends HttpServlet {
                 System.out.println("Eliminando...");
                 mostrarPro(request, response);
                 break;
+            case "crearPedi":
+                System.out.println("Eliminando...");
+                mostrarPro(request, response);
+                break;
         }
     }
 
@@ -128,8 +132,14 @@ public class EditarUsuarioServlet extends HttpServlet {
         request.setAttribute("ListaUsuario", ListaUsuario);
         dispatcher.forward(request, response);
     }
-    
+
     protected void mostrarPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/MostrarPro.jsp");
+        UsuarioServiceimpl service = new UsuarioServiceimpl();
+        dispatcher.forward(request, response);
+    }
+
+    protected void crearPedi(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/MostrarPro.jsp");
         UsuarioServiceimpl service = new UsuarioServiceimpl();
         dispatcher.forward(request, response);
