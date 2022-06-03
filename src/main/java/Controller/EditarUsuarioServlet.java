@@ -22,7 +22,6 @@ public class EditarUsuarioServlet extends HttpServlet {
     IUsuarioService service;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("holaaaaaaaaaaaaaaa");
         String action = request.getParameter("action");
         System.out.println("Action: " + action);
         switch (action) {
@@ -49,6 +48,10 @@ public class EditarUsuarioServlet extends HttpServlet {
             case "eliminar":
                 System.out.println("Eliminando...");
                 eliminar(request, response);
+                break;
+            case "mostrarPro":
+                System.out.println("Eliminando...");
+                mostrarPro(request, response);
                 break;
         }
     }
@@ -123,6 +126,12 @@ public class EditarUsuarioServlet extends HttpServlet {
         service.eliminarRegistro(usuario);
         List<Usuario> ListaUsuario = this.service.obtenerRegistros();
         request.setAttribute("ListaUsuario", ListaUsuario);
+        dispatcher.forward(request, response);
+    }
+    
+    protected void mostrarPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/MostrarPro.jsp");
+        UsuarioServiceimpl service = new UsuarioServiceimpl();
         dispatcher.forward(request, response);
     }
 }

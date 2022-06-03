@@ -43,6 +43,9 @@
                                 <li><a class="dropdown-item" href="EditarUsuarioServlet?action=listar">Eliminar</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="EditarUsuarioServlet?action=mostrarPro">Mostrar Productos</a>
+                        </li>
                     </ul>
                 </div>
             </div>

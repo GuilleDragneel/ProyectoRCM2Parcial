@@ -1,3 +1,9 @@
+/*
+    Autor= Guillermo Daniel Cruz Ortega
+    Fecha creacion= 03/06/2022
+    Fecha actualizacion= 03/06/2022
+    Descripcion= Interfaz IProductoModel
+ */
 package Model;
 
 import Entity.Productos;
