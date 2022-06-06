@@ -18,8 +18,8 @@
         <link rel="Stylesheet" href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,6 +50,9 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
         <form action="EditarUsuarioServlet?action=actualizar" method="POST">
             <input name="codigo" type="hidden" value="<c:out value="${usuario.codigo}"></c:out>">  
                 <div class="container-md">
@@ -91,7 +94,7 @@
                         <input name="edad" value="<c:out value="${usuario.edad}"></c:out>" type="number" required pattern="[0-9]{1,}" min="18" max="99" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
                     <div id="emailHelp" class="form-text">Mayor que 18</div>
                 </div>
-                <button class="summit" class="btn btn-primary" >Crear</button>
+                <button class="btn btn-dark">Guardar</button>
             </div>
         </form>
     </body>

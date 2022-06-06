@@ -20,8 +20,8 @@
         <link rel="Stylesheet" href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -52,6 +52,9 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
     </section>
     <section class='forma_tabla'>
         <h1> Tabla Usuarios </h1>

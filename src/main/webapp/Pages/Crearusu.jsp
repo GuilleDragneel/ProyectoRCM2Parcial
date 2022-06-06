@@ -19,8 +19,8 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -52,6 +52,9 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
         <form action="EditarUsuarioServlet?action=crear" method="POST">
             <div class="container-md">
                 <div class="mb-3">
@@ -92,7 +95,7 @@
                     <input name="edad" value="21" type="number" required pattern="[0-9]{1,}" min="18" max="99" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
                     <div id="emailHelp" class="form-text">Mayor que 18</div>
                 </div>
-                <button class="summit" class="btn btn-primary" >Crear</button>
+                <button class="btn btn-dark" >Crear</button>
             </div>
         </form>
     </body> 

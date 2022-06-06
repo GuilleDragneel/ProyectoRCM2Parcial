@@ -4,84 +4,15 @@
     Fecha actualizacion= 10/05/2022
     Descripcion= Estilos css de tablas y body
  */
-#success_message{
-    display: none;
-}
-.header{
-    color: #fff;
-    padding: 15px;
-    font-family: Helvetica;
-    width: 680px;
-    margin: 0 auto;
-    text-align: center;
-}
-.bodys{
-    aling: center;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    margin-bottom: 40px;
-    background-image: url("images/mochi.jpg");
-    font-family: 'Lato', sans-serif;
-}
-*{
-    margin: 0;
-    padding: 0;
-}
-ul{
-    list-style: none;
-}
-#menu li>a{
-    background-color: #245c85;
-    color: white;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    min-width: 100px;
-}
-#menu li>a:hover{
-    color: #000;
-    background-color: #00e5e5;
-}
-#menu>li{
-    float: left;
-    text-align:center
-}
-#menu>li>ul{
-    display: none;
-}
-#menu>li:hover>ul {
-    display:block;
-}
-h1.principal{
-    font-family: "Sans-serif";
-}
-section.forma{
-    width: 70%;
-    margin: auto;
-    padding: 0px 10px;
-    background-color: #000;
-}
-section.forma_registro{
-    width: 70%;
-    margin: auto;
-    padding: 0px 10px;
-    background-color: #00e5e5;
-}
 /*Estilo tabla*/
 section.forma_tabla{
     width: 70%;
     margin: auto;
     padding: 0px 10px;
-    background-color: #b3a1f0;
+    background-color: #245c85;
 }
 table tr:hover {
-    background: #00e5e5;
+    background: #fff;
     cursur: pointer;
 }
 table {
@@ -94,30 +25,5 @@ th, td {
     padding: 8px;
 }
 tr:nth-child(even) {
-    background-color: #F2EADC;
-}
-/*Esctilo Button*/
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 15px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #EEC170;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9x #999;
-}
-
-.button:hover {
-    background-color: #FFAE6A;
-}
-
-.button:active {
-    background-color: #fff;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    background-color: #999;
 }
