@@ -1,41 +1,40 @@
 /*
     Autor= Guillermo Daniel Cruz Ortega
-    Fecha creacion= 03/06/2022
-    Fecha actualizacion= 03/06/2022
-    Descripcion= Clase productos y metodos get y set
+    Fecha creacion= 07/06/2022
+    Fecha actualizacion= 07/06/2022
+    Descripcion= Clase Productos y metodos get y set
  */
 package Entity;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
 
-@MappedSuperclass
+@Entity
 @Table(name = "productos")
-@XmlRootElement
 public class Productos implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "codigo")
     private Integer codigo;
-    @Size(max = 20)
-    @Column(name = "nombreprod")
+    @Column(name = "nombreprod", length = 20, nullable = true)
     private String nombreprod;
-    @Size(max = 50)
-    @Column(name = "descripcion")
+    @Column(name = "descripcion", length = 50, nullable = true)
     private String descripcion;
     @Column(name = "cantidad")
     private Integer cantidad;
+    @Column(name = "total")
+    private Integer total;
+    @Column(name = "pago")
+    private Double pago;
+    @Column(name = "cambio")
+    private Double cambio;
 
     public Productos() {
     }
@@ -74,6 +73,30 @@ public class Productos implements Serializable {
 
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+    public Double getPago() {
+        return pago;
+    }
+
+    public void setPago(Double pago) {
+        this.pago = pago;
+    }
+
+    public Double getCambio() {
+        return cambio;
+    }
+
+    public void setCambio(Double cambio) {
+        this.cambio = cambio;
     }
 
 }

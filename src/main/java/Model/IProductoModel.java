@@ -7,6 +7,7 @@
 package Model;
 
 import Entity.Productos;
+import java.util.List;
 
 public interface IProductoModel {
 
@@ -15,4 +16,6 @@ public interface IProductoModel {
     public void eliminarRegistroP(Productos producto);
 
     public Productos obtenerRegistro(int idProducto);
+
+    public List<Productos> obtenerRegistros();
 }

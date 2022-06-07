@@ -25,14 +25,17 @@ public class UsuarioServiceimpl implements IUsuarioService {
         modelo.actualizarRegistro(usuario);
     }
 
+    @Override
     public void eliminarRegistro(Usuario usuario) {
         modelo.eliminarRegistro(usuario);
     }
 
+    @Override
     public List<Usuario> obtenerRegistros() {
         return modelo.obtenerRegistros();
     }
 
+    @Override
     public Usuario obtenerRegistro(int idUsuario) {
         return modelo.obtenerRegistro(idUsuario);
     }
