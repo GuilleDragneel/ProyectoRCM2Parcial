@@ -96,6 +96,52 @@
                 </div>
                 <button class="btn btn-dark">Guardar</button>
             </div>
+            <br>
+            <br>
         </form>
+        <div class="container-fluid">
+            <div class="row p-5 pb-2 bg-dark text-white">
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h2">The Cat</p>
+                    <p class="text-secondary" href="#">Lecce, Italia.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Recetas</p>
+                    <div class="mb-2">
+                        <a class="text-secondary text-decoration-none" href="#">Albondigon</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Pasta</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Pizza</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Cannolis</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Links</p>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Terms & Conditions</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Privacity Policy</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Contacto</p>   
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Instagram</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Facebook</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 pt-4">
+                    <p class="text-white text-center">Copyright - All rights reserved ° 2022</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

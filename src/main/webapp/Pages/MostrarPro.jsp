@@ -56,93 +56,83 @@
         <br>
         <div class="container">
             <div class="row justify-content-center">
+
                 <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="Resourses/images/albondigon.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 name="nombreprod" class="card-title">Albondigon</h5>
-                                <p name="descripcion" class="card-text">Carne molida extendida y enrollada en forma cilíndrica con relleno de huevo y verduras en su interios.</p>
-                                <p name="descripcion" class="price" class="card-text">Precio unitario: $500</p>
+                            <div class="card-body"> 
+                                <c:forEach var="desproductos" items="${ListaPro}"> 
+                                    <h5 name="nombreprod" class="card-title"><c:out value="${desproductos.nomProducto}"></c:out></h5>
+                                    <p name="descripcion" class="card-text"><c:out value="${descripcion.desproductos}"></c:out></p>
+                                    <p name="descripcion" class="price" class="card-text"><c:out value="${desproductos.precio}"></c:out></p> 
+                                </c:forEach>
                                 <label for="exampleInputEmail1" class="form-label">Cantidad</label>
                                 <input name="cantidad" onclick="Total(2);" id="cant2" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="10" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
                                 <br>
                                 <input type="text" class="total" value="" id="tot2" disabled />
                                 <br>
                                 <br>
-                                <a href="#" class="btn btn-light">Agregar</a>
+                                <a href="EditarUsuarioServlet?action=mostrarPro" class="btn btn-light">Agregar</a>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
-                <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/Spagetti.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 name="nombreprod" class="card-title">Spagetti</h5>
-                                <p name="descripcion" class="card-text">Pasta italiana elaborada con harina de grano duro y agua, acompañada de salsa echa a base de tomate y especias. </p>
-                                <p name="descripcion" class="price" class="card-text">Precio unitario: $500</p>
-                                <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                                <input name="cantidad" onclick="Total(2);" id="cant2" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="10" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
-                                <br>
-                                <input type="text" class="total" value="" id="tot2" disabled />
-                                <br>
-                                <br>
-                                <a href="#" class="btn btn-light">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img Src="Resourses/images/Lasaña.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 name="nombreprod" class="card-title">Lasaña</h5>
-                                <p name="descripcion" class="card-text">Pasta en láminas intercaladas con carne y conbechamel y abundante queso rallado gratinado al horno.</p>
-                                <p name="descripcion" class="price" class="card-text">Precio unitario: $500</p>
-                                <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                                <input name="cantidad" onclick="Total(2);" id="cant2" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="10" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
-                                <br>
-                                <input type="text" class="total" value="" id="tot2" disabled />
-                                <br>
-                                <br>
-                                <a href="#" class="btn btn-light">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/PastaVerde.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 name="nombreprod" class="card-title">Spagetti Verde</h5>
-                                <p name="descripcion" class="card-text">Pasta italiana elaborada con harina de grano duro y agua, acompañada de salsa echa a base de verde y cremas</p>
-                                <p name="descripcion" class="price" class="card-text">Precio unitario: $500</p>
-                                <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                                <input name="cantidad" onclick="Total(2);" id="cant2" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="10" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
-                                <br>
-                                <input type="text" class="total" value="" id="tot2" disabled />
-                                <br>
-                                <br>
-                                <a href="#" class="btn btn-light">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
                 <br>
                 <br>
-                <a href="#" class="btn btn-dark">Comprar</a> 
+                <a href="EditarUsuarioServlet?action=crearPedi" class="btn btn-dark">Comprar</a> 
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container-fluid">
+            <div class="row p-5 pb-2 bg-dark text-white">
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h2">The Cat</p>
+                    <p class="text-secondary" href="#">Lecce, Italia.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Recetas</p>
+                    <div class="mb-2">
+                        <a class="text-secondary text-decoration-none" href="#">Albondigon</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Pasta</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Pizza</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Cannolis</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Links</p>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Terms & Conditions</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Privacity Policy</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <p class="h4">Contacto</p>   
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Instagram</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-secondary  text-decoration-none" href="#">Facebook</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 pt-4">
+                    <p class="text-white text-center">Copyright - All rights reserved ° 2022</p>
+                </div>
             </div>
         </div>
     </body>

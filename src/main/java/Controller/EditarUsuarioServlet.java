@@ -6,7 +6,9 @@
  */
 package Controller;
 
+import Entity.Desproductos;
 import Entity.Usuario;
+import Service.DesproductosServiceimpl;
 import Service.IUsuarioService;
 import Service.UsuarioServiceimpl;
 import java.io.IOException;
@@ -50,12 +52,12 @@ public class EditarUsuarioServlet extends HttpServlet {
                 eliminar(request, response);
                 break;
             case "mostrarPro":
-                System.out.println("Eliminando...");
+                System.out.println("Mostrar Producto...");
                 mostrarPro(request, response);
                 break;
             case "crearPedi":
-                System.out.println("Eliminando...");
-                mostrarPro(request, response);
+                System.out.println("Crear Pedido...");
+                crearPedi(request, response);
                 break;
         }
     }
@@ -134,13 +136,18 @@ public class EditarUsuarioServlet extends HttpServlet {
     }
 
     protected void mostrarPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("Listando productos");
         RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/MostrarPro.jsp");
-        UsuarioServiceimpl service = new UsuarioServiceimpl();
+        DesproductosServiceimpl service = new DesproductosServiceimpl();
+        List<Desproductos> ListaPro = service.obtenerRegistros();
+        //System.out.println("lista: " + ListaUsuario.size());
+        request.setAttribute("ListaPro", ListaPro);
         dispatcher.forward(request, response);
+        System.out.println("Terminado de listar");
     }
 
     protected void crearPedi(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/MostrarPro.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Pages/TicketPro.jsp");
         UsuarioServiceimpl service = new UsuarioServiceimpl();
         dispatcher.forward(request, response);
     }

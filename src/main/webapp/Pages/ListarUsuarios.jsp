@@ -56,22 +56,23 @@
         <br>
         <br>
     </section>
-    <section class='forma_tabla'>
-        <h1> Tabla Usuarios </h1>
-        <table border='2'>
-            <tr>
-                <th>Nombre Usuario</th>
-                <th>Contraseña</th>
-                <th>Nombre</th>
-                <th>Sexo</th>
-                <th>Edad</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-            <tbody>
-                <c:forEach var="usuario" items="${ListaUsuario}">
-                    <tr>
-                        <td  scope="row"> <c:out value="${usuario.nombreUsuario}"></c:out> </td>
+    <div class="container-fluid">
+        <section class='forma_tabla'>
+            <h1> Tabla Usuarios </h1>
+            <table>
+                <tr>
+                    <th>Nombre Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Sexo</th>
+                    <th>Edad</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tbody>
+                    <c:forEach var="usuario" items="${ListaUsuario}">
+                        <tr>
+                        <td > <c:out value="${usuario.nombreUsuario}"></c:out> </td>
                         <td> <c:out value="${usuario.contraseña }"></c:out></td>
                         <td> <c:out value="${usuario.nombre}"></c:out> </td>
                         <td> <c:out value="${usuario.sexo}"></c:out></td>
@@ -79,13 +80,70 @@
                         <th><a href="EditarUsuarioServlet?action=editar&codigo=<c:out value="${usuario.codigo}"></c:out>">Editar</a></th>
                         <th><a href="EditarUsuarioServlet?action=eliminar&codigo=<c:out value="${usuario.codigo}"></c:out>">Eliminar</a></th>
                         </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-    </section>
-</body>
-</html>
-<body>
-
+                    </c:forEach>
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row p-5 pb-2 bg-dark text-white">
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h2">The Cat</p>
+                <p class="text-secondary" href="#">Lecce, Italia.</p>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h4">Recetas</p>
+                <div class="mb-2">
+                    <a class="text-secondary text-decoration-none" href="#">Albondigon</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Pasta</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Pizza</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Cannolis</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h4">Links</p>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Terms & Conditions</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Privacity Policy</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h4">Contacto</p>   
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Instagram</a>
+                </div>
+                <div class="mb-2">
+                    <a class="text-secondary  text-decoration-none" href="#">Facebook</a>
+                </div>
+            </div>
+            <div class="col-xs-12 pt-4">
+                <p class="text-white text-center">Copyright - All rights reserved ° 2022</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
