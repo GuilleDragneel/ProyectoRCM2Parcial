@@ -29,8 +29,8 @@ public class Desproductos implements Serializable {
     private String descripcion;
     @Column(name = "precio")
     private Integer precio;
-    @Column(name = "imagen")
-    private byte[] imagen;
+    @Column(name = "imagen", length = 20, nullable = true)
+    private String imagen;
 
     public Desproductos() {
     }
@@ -70,13 +70,12 @@ public class Desproductos implements Serializable {
     public void setPrecio(Integer precio) {
         this.precio = precio;
     }
-
-    public byte[] getImagen() {
+    
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-    
 }

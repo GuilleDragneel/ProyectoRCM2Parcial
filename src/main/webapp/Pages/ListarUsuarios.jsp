@@ -6,7 +6,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,7 +21,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
+            <div class="container">0
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,32 +57,33 @@
         <br>
     </section>
     <div class="container-fluid">
-        <section class='forma_tabla'>
-            <h1> Tabla Usuarios </h1>
-            <table>
-                <tr>
-                    <th>Nombre Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Nombre</th>
-                    <th>Sexo</th>
-                    <th>Edad</th>
-                    <th>Editar</th>
-                    <th>Eliminar</th>
-                </tr>
-                <tbody>
+        <section>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
                     <c:forEach var="usuario" items="${ListaUsuario}">
-                        <tr>
-                        <td > <c:out value="${usuario.nombreUsuario}"></c:out> </td>
-                        <td> <c:out value="${usuario.contraseña }"></c:out></td>
-                        <td> <c:out value="${usuario.nombre}"></c:out> </td>
-                        <td> <c:out value="${usuario.sexo}"></c:out></td>
-                        <td> <c:out value="${usuario.edad}"></c:out></td>
-                        <th><a href="EditarUsuarioServlet?action=editar&codigo=<c:out value="${usuario.codigo}"></c:out>">Editar</a></th>
-                        <th><a href="EditarUsuarioServlet?action=eliminar&codigo=<c:out value="${usuario.codigo}"></c:out>">Eliminar</a></th>
-                        </tr>
+                        <div class="card-group text-white bg-dark mb-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Usuario</h5>
+                            </div>  
+                            <div class="card-body">
+                                <p class="list-group-item">Nombre usuario: <c:out value="${usuario.nombreUsuario}"></c:out> </p>
+                                <p class="list-group-item">Contraseña: <c:out value="${usuario.contraseña }"></c:out></p>
+                                <p class="list-group-item">Nombre: <c:out value="${usuario.nombre}"></c:out> </p>
+                                <p class="list-group-item">Sexo: <c:out value="${usuario.sexo}"></c:out></p>
+                                <p class="list-group-item">Edad: <c:out value="${usuario.edad}"></c:out></p>
+                                <a class="btn btn-light" href="EditarUsuarioServlet?action=editar&codigo=<c:out value="${usuario.codigo}"></c:out>">Editar</a>
+                                <a class="btn btn-light" href="EditarUsuarioServlet?action=eliminar&codigo=<c:out value="${usuario.codigo}"></c:out>">Eliminar</a>
+                            </div>
+                        </div>
                     </c:forEach>
-                    </tbody>
-            </table>
+                </div> 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
         </section>
     </div>
     <br>

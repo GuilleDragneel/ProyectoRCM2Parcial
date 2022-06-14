@@ -65,17 +65,17 @@ public class DesProductosModelimpl implements IDesProductosModel {
 
     @Override
     public List<Desproductos> obtenerRegistros() {
-        List<Desproductos> listaUsuario = null;
+        List<Desproductos> listaProductos = null;
         try {
             sf = new Configuration().configure().buildSessionFactory();
             s = sf.openSession();
-            listaUsuario = s.createCriteria(Desproductos.class).list();
+            listaProductos = s.createCriteria(Desproductos.class).list();
             s.close();
             sf.close();
         } catch (HibernateException e) {
             System.out.println("Error al obtener registros " + e.getMessage());
         }
-        return listaUsuario;
+        return listaProductos;
     }
 
 }

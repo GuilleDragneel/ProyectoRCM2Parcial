@@ -2,6 +2,7 @@
     Document   : MostrarPro
     Created on : 3 jun 2022, 10:23:11
     Author     : labso03
+    Drescription: Pagina jsp donde se listan los productos
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,7 +15,6 @@
         <link rel="Stylesheet" href="webjars/bootstrap/5.1.3/css/bootstrap.min.css">
         <script src="webjars/jquery/3.6.0/dist/jquery.min.js"></script> 
         <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
-        <script src="Resourses/EstiloMenu.js"></script>
         <link rel="Stylesheet" href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
@@ -46,6 +46,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="EditarUsuarioServlet?action=mostrarPro">Mostrar Productos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="EditarUsuarioServlet?action=mostrarPedi">Ver pedido</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,40 +57,32 @@
         <br>
         <br>
         <br>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row justify-content-center">
-
-                <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="Resourses/images/albondigon.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"> 
-                                <c:forEach var="desproductos" items="${ListaPro}"> 
-                                    <h5 name="nombreprod" class="card-title"><c:out value="${desproductos.nomProducto}"></c:out></h5>
-                                    <p name="descripcion" class="card-text"><c:out value="${descripcion.desproductos}"></c:out></p>
-                                    <p name="descripcion" class="price" class="card-text"><c:out value="${desproductos.precio}"></c:out></p> 
-                                </c:forEach>
-                                <label for="exampleInputEmail1" class="form-label">Cantidad</label>
-                                <input name="cantidad" onclick="Total(2);" id="cant2" value="1" type="number" required pattern="[0-9]{1,}" min="1" max="10" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>                    
-                                <br>
-                                <input type="text" class="total" value="" id="tot2" disabled />
-                                <br>
-                                <br>
-                                <a href="EditarUsuarioServlet?action=mostrarPro" class="btn btn-light">Agregar</a>
+                <c:forEach var="desproductos" items="${ListaPro}"> 
+                    <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=<c:out value="${desproductos.imagen}"></c:out> class="img-fluid rounded-start" alt="...">
                             </div>
-                        </div>
-                    </div>                    
-                </div>
-
-
+                            <div class="col-md-4">
+                                <div class="card-body"> 
+                                    <form action="EditarUsuarioServlet?action=crearPedi&idpedido=${desproductos.codigo}" method="post">
+                                        <h5 name="nombreprod" class="card-title"><c:out value="${desproductos.nomProducto}"></c:out></h5>
+                                        <p name="descripcion" class="card-text"><c:out value="${desproductos.descripcion}"></c:out></p>
+                                        <p name="total" class="card-text">$<c:out value="${desproductos.precio}"></c:out></p> 
+                                        <button class="btn btn-light">Agregar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                </c:forEach>
                 <br>
                 <br>
-                <a href="EditarUsuarioServlet?action=crearPedi" class="btn btn-dark">Comprar</a> 
                 <br>
                 <br>
-            </div>
+            </div> 
             <br>
             <br>
         </div>

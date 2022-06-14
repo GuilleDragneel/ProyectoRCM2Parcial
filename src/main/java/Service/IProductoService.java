@@ -7,6 +7,7 @@
 package Service;
 
 import Entity.Productos;
+import java.util.List;
 
 public interface IProductoService {
 
@@ -15,4 +16,7 @@ public interface IProductoService {
     public void eliminarRegistroP(Productos producto);
 
     public Productos obtenerRegistro(int idProducto);
+
+    public List<Productos> obtenerRegistros();
+
 }

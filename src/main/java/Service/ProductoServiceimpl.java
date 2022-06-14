@@ -9,6 +9,7 @@ package Service;
 import Entity.Productos;
 import Model.IProductoModel;
 import Model.ProductoModelimpl;
+import java.util.List;
 
 public class ProductoServiceimpl implements IProductoService {
 
@@ -27,6 +28,10 @@ public class ProductoServiceimpl implements IProductoService {
     @Override
     public Productos obtenerRegistro(int idProducto) {
         return modelo.obtenerRegistro(idProducto);
+    }
+    
+    public List<Productos> obtenerRegistros() {
+        return modelo.obtenerRegistros();
     }
 
 }

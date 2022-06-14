@@ -2,6 +2,7 @@
     Document   : TicketPro
     Created on : 6 jun 2022, 10:16:49
     Author     : labso03
+    Drescription: Pagina jsp donde se listan los productos que se agegan al carrito
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -50,6 +51,42 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <c:forEach var="productos" items="${ListaPro}"> 
+                    <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body"> 
+                                    <h5 name="nombreprod" class="card-title"><c:out value="${productos.nombreprod}"></c:out></h5>
+                                    <p name="descripcion" class="card-text"><c:out value="${productos.descripcion}"></c:out></p>
+                                    <a href="EditarUsuarioServlet?action=eliminarPro&codigo=<c:out value="${productos.codigo}"></c:out>" class="btn btn-light">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>       
+                        </div>
+                </c:forEach>
+            </div> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         <br>
         <br>
         <br>
         <br>
