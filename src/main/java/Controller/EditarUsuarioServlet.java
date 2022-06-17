@@ -81,7 +81,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    protected void actualizar(HttpServletRequest request, HttpServletResponse 
+    protected void actualizar(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
         System.out.println(request.getParameter("codigo"));
         Usuario usu = new Usuario(Integer.parseInt(request.getParameter
@@ -124,19 +124,19 @@ public class EditarUsuarioServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    protected void crearfor(HttpServletRequest request, HttpServletResponse 
+    protected void crearfor(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher
         ("Pages/Crearusu.jsp");
         dispatcher.forward(request, response);
     }
 
-    protected void crearusu(HttpServletRequest request, HttpServletResponse 
+    protected void crearusu(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
         service = new UsuarioServiceimpl();
         Usuario u = new Usuario();
         u.setNombreUsuario(request.getParameter("nombreUsuario"));
-        u.setContraseña(request.getParameter("nombreUsuario"));
+        u.setContraseña(request.getParameter("contraseña"));
         u.setNombre(request.getParameter("nombre"));
         u.setSexo(request.getParameter("sexo"));
         u.setEdad(Integer.parseInt(request.getParameter("edad")));
@@ -165,7 +165,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    protected void mostrarPro(HttpServletRequest request, HttpServletResponse 
+    protected void mostrarPro(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher
         ("Pages/MostrarPro.jsp");
@@ -178,8 +178,8 @@ public class EditarUsuarioServlet extends HttpServlet {
     protected void crearPedi(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
         service1 = new ProductoServiceimpl();
-        System.out.println("idpedido:------->>>> "+ request.getParameter
-        ("idpedido"));
+        System.out.println("idpedido:------->>>> " + 
+                request.getParameter("idpedido"));
         Productos u = new Productos();
         System.out.println("nom1");
         u.setNombreprod(request.getParameter("nombreprod"));
@@ -190,19 +190,19 @@ public class EditarUsuarioServlet extends HttpServlet {
         System.out.println("pre1");
         //u.setTotal(Integer.parseInt(request.getParameter("total")));
         System.out.println("pre2");
-        
+
         DesproductosServiceimpl servicep = new DesproductosServiceimpl();
-        Desproductos pro = servicep.obtenerRegistro(Integer.parseInt(request.
-                getParameter("idpedido")));
-        
+        Desproductos pro = servicep.obtenerRegistro
+        (Integer.parseInt(request.getParameter("idpedido")));
+
         u.setCodigo(pro.getCodigo());
         u.setNombreprod(pro.getNomProducto());
         u.setDescripcion(pro.getDescripcion());
         u.setTotal(pro.getPrecio());
-        
+
         service1 = new ProductoServiceimpl();
         service1.crearRegistroP(u);
-        RequestDispatcher dispatcher = request.getRequestDispatcher
+        RequestDispatcher dispatcher = request.getRequestDispatcher 
         ("EditarUsuarioServlet?action=mostrarPro");
         dispatcher.forward(request, response);
     }
@@ -217,7 +217,7 @@ public class EditarUsuarioServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    protected void eliminarPro(HttpServletRequest request, HttpServletResponse
+    protected void eliminarPro(HttpServletRequest request, HttpServletResponse 
             response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher
         ("Pages/TicketPro.jsp");
