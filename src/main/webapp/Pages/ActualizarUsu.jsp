@@ -1,8 +1,8 @@
 <%-- 
-    Document   : ActualizarUsu
+    Autor: Guillermo Daniel Cruz Ortega
     Created on : 5 may 2022, 11:01:23
-    Author     : labso03
-    Description : Pagina donde se actualizan los datos del usuario
+    Fecha modificación 20 jun 2022
+    Descripción: Pagina de actualización de usuario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,6 +10,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+<%-- 
+    Llamada a todos los recursos a ocupar
+--%>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8, 
               initial-scale=1.0">
         <script src="Resourses/EstiloMenu.js"></script>  
@@ -21,6 +24,9 @@
               href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
+<%-- 
+    Menu principal
+--%>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"></a>
@@ -70,6 +76,9 @@
         <br>
         <br>
         <br>
+<%-- 
+    Formulario para editar el valor 
+--%>
         <form action="EditarUsuarioServlet?action=actualizar" method="POST">
             <input name="codigo" type="hidden" 
                   value="<c:out value="${usuario.codigo}"></c:out>">  
@@ -109,14 +118,14 @@
                         <label for="exampleInputPassword1" class="form-label">
                             Contraseña</label>
                         <input name="contraseña" 
-                               value="<c:out value="${usuario.contraseña}"></c:out>" 
+                           value="<c:out value="${usuario.contraseña}"></c:out>" 
                                class="form-control" 
                              id="exampleInputPassword1" required>
                         <div id="contraseña" class="form-text">
                             Solo letras y numeros</div>
                     </div>
-                    <span class="input-group-addon"><i class=
-                                                       "fa fa-venus-mars"></i></span>
+                    <span class="input-group-addon"><i 
+                            class="fa fa-venus-mars"></i></span>
                     <label for="exampleInputPassword1" class="form-label">Sexo
                     </label>
                     <div class="form-check">
@@ -151,6 +160,9 @@
             <br>
             <br>
         </form>
+<%-- 
+    Pie de página
+--%>
         <div class="container-fluid">
             <div class="row p-5 pb-2 bg-dark text-white">
                 <div class="col-xs-12 col-md-6 col-lg-3">

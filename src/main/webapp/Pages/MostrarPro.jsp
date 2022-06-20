@@ -1,8 +1,8 @@
 <%-- 
-    Document   : MostrarPro
-    Created on : 3 jun 2022, 10:23:11
-    Author     : labso03
-    Drescription: Pagina jsp donde se listan los productos
+    Autor: Guillermo Daniel Cruz Ortega
+    Fecha creación: 3 jun 2022, 10:23:11
+    Fecha modificación 20 jun 2022
+    Descripción: Pagina donde se listan los productos
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,6 +10,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+<%-- 
+    Llamada a todos los recursos a ocupar
+--%>
         <meta http-equiv="Content-Type" 
               content="text/html; charset=UTF-8, initial-scale=1.0">
         <script src="Resourses/EstiloMenu.js"></script>  
@@ -21,6 +24,9 @@
               href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
+<%-- 
+    Menu principal
+--%>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"></a>
@@ -73,6 +79,9 @@
         <br>
         <br>
         <br>
+<%-- 
+    Tarjetas donde se muestran los productos
+--%>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <c:forEach var="desproductos" items="${ListaPro}"> 
@@ -109,6 +118,9 @@
             <br>
             <br>
         </div>
+<%-- 
+    Pie de página
+--%>
         <div class="container-fluid">
             <div class="row p-5 pb-2 bg-dark text-white">
                 <div class="col-xs-12 col-md-6 col-lg-3">

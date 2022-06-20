@@ -1,14 +1,17 @@
 <%-- 
-    Document   : AgregarProd
-    Created on : 14 jun 2022, 10:29:25
-    Author     : labso03
-    Description : Pagina de creación de nuevo producto
+    Autor: Guillermo Daniel Cruz Ortega
+    Fecha creación: 14 jun 2022, 10:29:25
+    Fecha modificación 20 jun 2022
+    Descripción: Pagina de creación de nuevo producto
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+<%-- 
+    Llamada a todos los recursos a ocupar
+--%>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="Resourses/EstiloMenu.js"></script>  
         <link rel="Stylesheet" 
@@ -20,6 +23,9 @@
 
     </head>
     <body>
+<%-- 
+    Menu principal
+--%>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"></a>
@@ -69,6 +75,9 @@
             </div>
         </nav>
     <body>
+<%-- 
+    Formulario para ingregar usuario
+--%>
         <form action="EditarUsuarioServlet?action=crear" method="POST">
             <div class="container-md">
                 <div class="mb-3">
@@ -137,6 +146,9 @@
             <br>
             <br>
         </form>
+<%-- 
+    Pie de página
+--%>
         <div class="container-fluid">
             <div class="row p-5 pb-2 bg-dark text-white">
                 <div class="col-xs-12 col-md-6 col-lg-3">

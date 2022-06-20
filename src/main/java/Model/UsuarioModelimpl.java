@@ -1,8 +1,8 @@
 /*
     Autor= Guillermo Daniel Cruz Ortega
-    Fecha creacion= 19/04/2022
-    Fecha actualizacion= 10/05/2022
-    Descripcion= Clase UsuarioModelimpl que implementa IUsuarioModel
+    Fecha creación= 19/04/2022
+    Fecha actualización= 10/05/2022
+    Descripción= Clase UsuarioModelimpl que implementa IUsuarioModel
  */
 package Model;
 
@@ -14,7 +14,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class UsuarioModelimpl implements IUsuarioModel {
-
+/*
+    Definición de objetos a ocupar
+*/  
     private SessionFactory sf;
     private Session s;
 
@@ -29,10 +31,13 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear registro " + e.getMessage());
+//System.out.println("Error al crear registro " + e.getMessage());
         }
     }
 
+/*
+    Método para actualizar usuario
+*/  
     @Override
     public void actualizarRegistro(Usuario usuario) {
         try {
@@ -44,10 +49,13 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al actualizar registro " + e.getMessage());
+//System.out.println("Error al actualizar registro " + e.getMessage());
         }
     }
-
+    
+/*
+    Método para eliminar usuario
+*/  
     @Override
     public void eliminarRegistro(Usuario usuario) {
         try {
@@ -59,10 +67,13 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al eliminar registro " + e.getMessage());
+//System.out.println("Error al eliminar registro " + e.getMessage());
         }
     }
 
+/*
+    Método para obtener lista de usuarios
+*/  
     @Override
     public List<Usuario> obtenerRegistros() {
         List<Usuario> listaUsuario = null;
@@ -73,11 +84,14 @@ public class UsuarioModelimpl implements IUsuarioModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al obtener registros " + e.getMessage());
+//System.out.println("Error al obtener registros " + e.getMessage());
         }
         return listaUsuario;
     }
-
+    
+/*
+    Método para obtener un usuario
+*/  
     @Override
     public Usuario obtenerRegistro(int idUsuario) {
         try {
@@ -88,7 +102,7 @@ public class UsuarioModelimpl implements IUsuarioModel {
             sf.close();
             return usuario;
         } catch (HibernateException e) {
-            System.out.println("Error al obtener resgistro " + e.getMessage());
+//System.out.println("Error al obtener resgistro " + e.getMessage());
         }
         return null;
     }

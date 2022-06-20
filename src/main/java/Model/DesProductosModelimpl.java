@@ -1,8 +1,8 @@
 /*
     Autor= Guillermo Daniel Cruz Ortega
-    Fecha creacion= 07/06/2022
-    Fecha actualizacion= 07/06/2022
-    Descripcion= Clase IDesproductoModelimpl 
+    Fecha creación= 07/06/2022
+    Fecha actualización= 07/06/2022
+    Descripción= Clase IDesproductoModelimpl 
  */
 package Model;
 
@@ -14,10 +14,16 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class DesProductosModelimpl implements IDesProductosModel {
-
+    
+/*
+    Definicion objetos a ocupar
+*/
     private SessionFactory sf;
     private Session s;
-
+    
+/*
+    Método de creación de desproducto
+*/
     @Override
     public void crearRegistroP(Desproductos desproducto) {
         try {
@@ -29,10 +35,13 @@ public class DesProductosModelimpl implements IDesProductosModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear registro de producto " + e.getMessage());
+  //System.out.println("Error al crear registro de producto " + e.getMessage());
         }
     }
 
+/*
+    Método de eliminación de desproducto
+*/
     @Override
     public void eliminarRegistroP(Desproductos desproducto) {
         try {
@@ -44,10 +53,12 @@ public class DesProductosModelimpl implements IDesProductosModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al eliminar registro de producto" + e.getMessage());
+//System.out.println("Error al eliminar registro de producto" + e.getMessage());
         }
     }
-
+/*
+    Método par obtener un desproducto
+*/
     @Override
     public Desproductos obtenerRegistro(int idDesproducto) {
         try {
@@ -58,11 +69,13 @@ public class DesProductosModelimpl implements IDesProductosModel {
             sf.close();
             return producto;
         } catch (HibernateException e) {
-            System.out.println("Error al obtener resgistro de producto" + e.getMessage());
+//System.out.println("Error al obtener resgistro de producto" + e.getMessage());
         }
         return null;
     }
-
+/*
+    Método para obtener una lista de desproductos
+*/
     @Override
     public List<Desproductos> obtenerRegistros() {
         List<Desproductos> listaProductos = null;
@@ -73,7 +86,7 @@ public class DesProductosModelimpl implements IDesProductosModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al obtener registros " + e.getMessage());
+//System.out.println("Error al obtener registros " + e.getMessage());
         }
         return listaProductos;
     }

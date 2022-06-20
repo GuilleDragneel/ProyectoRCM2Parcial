@@ -1,8 +1,8 @@
 <%-- 
-    Document   : ListarUsuarios
-    Created on : 5 may 2022, 9:49:57
-    Author     : Guiller
-    Description : Pagina donde se listan los usuarios
+    Autor: Guillermo Daniel Cruz Ortega
+    Fecha creación: 5 may 2022, 9:49:57
+    Fecha modificación 20 jun 2022
+    Descripción: Pagina donde se listan los usuarios
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

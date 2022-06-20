@@ -9,8 +9,14 @@ package Model;
 import Entity.Desproductos;
 import java.util.List;
 
+/*
+    Definición de una interface
+*/
 public interface IDesProductosModel {
-
+    
+/*
+    Definición de métodos a ocupar en desproductos
+*/
     public void crearRegistroP(Desproductos desproducto);
 
     public void eliminarRegistroP(Desproductos desproducto);

@@ -1,8 +1,8 @@
 <%-- 
-    Document   : TicketPro
-    Created on : 6 jun 2022, 10:16:49
-    Author     : labso03
-    Drescription: Pagina jsp donde se listan los productos que se agegan al carrito
+    Autor: Guillermo Daniel Cruz Ortega
+    Fecha creación: 6 jun 2022, 10:16:49
+    Fecha modificación 20 jun 2022
+    Descripción: Pagina donde se listan los productos que han sido agregados en la compra
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

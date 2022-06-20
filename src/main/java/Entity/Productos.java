@@ -1,6 +1,6 @@
 /*
-    Autor= Guillermo Daniel Cruz Ortega
-    Fecha creacion= 07/06/2022
+    Autor: Guillermo Daniel Cruz Ortega
+    Fecha creacion: 07/06/2022
     Fecha actualizacion= 07/06/2022
     Descripcion= Clase Productos y metodos get y set
  */
@@ -17,7 +17,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "productos")
 public class Productos implements Serializable {
-
+    
+/*
+    Definicion de datos
+*/
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,14 +32,20 @@ public class Productos implements Serializable {
     private String descripcion;
     @Column(name = "total")
     private Integer total;
-
+    
+/*
+    Constructor vacio y con un parametro
+*/
     public Productos() {
     }
 
     public Productos(Integer codigo) {
         this.codigo = codigo;
     }
-
+    
+/*
+    Métodos set y get de los campos del producto
+*/
     public Integer getCodigo() {
         return codigo;
     }

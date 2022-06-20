@@ -18,6 +18,9 @@ import javax.persistence.Table;
 @Table(name = "desproductos")
 public class Desproductos implements Serializable {
 
+/*
+    Definicion de datos
+*/
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,13 +35,19 @@ public class Desproductos implements Serializable {
     @Column(name = "imagen", length = 20, nullable = true)
     private String imagen;
 
+/*
+    Constructor vacio y con un parametro
+*/
     public Desproductos() {
     }
 
     public Desproductos(Integer codigo) {
         this.codigo = codigo;
     }
-
+    
+/*
+    Métodos set y get de los campos del producto
+*/
     public Integer getCodigo() {
         return codigo;
     }

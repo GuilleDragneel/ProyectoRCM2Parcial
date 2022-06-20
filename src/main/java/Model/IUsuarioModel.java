@@ -9,8 +9,14 @@ package Model;
 import Entity.Usuario;
 import java.util.List;
 
+/*
+    Definición de una interface
+*/
 public interface IUsuarioModel {
-
+    
+/*
+    Definición de métodos a ocupar en usuario
+*/
     public void crearRegistro(Usuario usuario);
 
     public void actualizarRegistro(Usuario usuario);

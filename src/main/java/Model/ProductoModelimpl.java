@@ -1,8 +1,8 @@
 /*
     Autor= Guillermo Daniel Cruz Ortega
-    Fecha creacion= 03/06/2022
-    Fecha actualizacion= 03/06/2022
-    Descripcion= Clase IProductoModel 
+    Fecha creación= 03/06/2022
+    Fecha actualización= 03/06/2022
+    Descripción= Clase IProductoModel 
  */
 package Model;
 
@@ -14,10 +14,16 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class ProductoModelimpl implements IProductoModel {
-
+    
+/*
+    Definicion objetos a ocupar
+*/
     private SessionFactory sf;
     private Session s;
 
+/*
+    Método de creación de producto
+*/    
     @Override
     public void crearRegistroP(Productos producto) {
         try {
@@ -33,6 +39,9 @@ public class ProductoModelimpl implements IProductoModel {
         }
     }
 
+/*
+    Método de eliminación producto
+*/  
     @Override
     public void eliminarRegistroP(Productos producto) {
         try {
@@ -48,6 +57,9 @@ public class ProductoModelimpl implements IProductoModel {
         }
     }
 
+/*
+    Método para obtener un producto
+*/  
     @Override
     public Productos obtenerRegistro(int idProducto) {
         try {
@@ -63,6 +75,9 @@ public class ProductoModelimpl implements IProductoModel {
         return null;
     }
     
+/*
+    Método para obtener una lista de productos
+*/      
     public List<Productos> obtenerRegistros() {
         List<Productos> listaUsuario = null;
         try {
