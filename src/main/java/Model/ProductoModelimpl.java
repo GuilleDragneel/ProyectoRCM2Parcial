@@ -35,7 +35,7 @@ public class ProductoModelimpl implements IProductoModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al crear registro de producto " + e.getMessage());
+//System.out.println("Error al crear registro de producto " + e.getMessage());
         }
     }
 
@@ -53,7 +53,7 @@ public class ProductoModelimpl implements IProductoModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al eliminar registro de producto" + e.getMessage());
+//System.out.println("Error al eliminar registro de producto" + e.getMessage());
         }
     }
 
@@ -70,7 +70,7 @@ public class ProductoModelimpl implements IProductoModel {
             sf.close();
             return producto;
         } catch (HibernateException e) {
-            System.out.println("Error al obtener resgistro de producto" + e.getMessage());
+//System.out.println("Error al obtener resgistro de producto" + e.getMessage());
         }
         return null;
     }
@@ -87,7 +87,7 @@ public class ProductoModelimpl implements IProductoModel {
             s.close();
             sf.close();
         } catch (HibernateException e) {
-            System.out.println("Error al obtener registros " + e.getMessage());
+//System.out.println("Error al obtener registros " + e.getMessage());
         }
         return listaUsuario;
     }

@@ -64,7 +64,8 @@ public class DesProductosModelimpl implements IDesProductosModel {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             s = sf.openSession();
-            Desproductos producto = (Desproductos) s.get(Desproductos.class, idDesproducto);
+            Desproductos producto = (Desproductos) 
+                    s.get(Desproductos.class, idDesproducto);
             s.close();
             sf.close();
             return producto;

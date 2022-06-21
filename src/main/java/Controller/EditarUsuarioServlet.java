@@ -29,6 +29,8 @@ public class EditarUsuarioServlet extends HttpServlet {
 */
     IUsuarioService service;
     IProductoService service1;
+    DesproductosServiceimpl service2;
+            
 /*
     Método doget donde se escoge la accion a realizar
 */
@@ -38,45 +40,39 @@ public class EditarUsuarioServlet extends HttpServlet {
         System.out.println("Action: " + action);
         switch (action) {
             case "editar":
-                System.out.println("Editando...");
                 editar(request, response);
                 break;
             case "actualizar":
-                System.out.println("Actualizar...");
                 actualizar(request, response);
                 break;
             case "listar":
-                System.out.println("Listando...");
                 listar(request, response);
                 break;
             case "crear":
-                System.out.println("Creando...");
                 crearusu(request, response);
                 break;
             case "crearfor":
-                System.out.println("Creando...");
                 crearfor(request, response);
                 break;
             case "eliminar":
-                System.out.println("Eliminando...");
                 eliminar(request, response);
                 break;
             case "mostrarPedi":
-                System.out.println("Mostrar Producto...");
                 mostrarPedi(request, response);
                 break;
             case "crearPedi":
-                System.out.println("Crear Pedido...");
                 crearPedi(request, response);
                 break;
             case "mostrarPro":
-                System.out.println("Crear Pedido...");
                 mostrarPro(request, response);
                 break;
             case "eliminarPro":
-                System.out.println("Eliminando...");
                 eliminarPro(request, response);
                 break;
+            case "agregarPro":
+                agregarPro(request, response);
+            case "crearPro":
+                crearPro(request, response);
         }
     }
 /*
@@ -186,8 +182,8 @@ public class EditarUsuarioServlet extends HttpServlet {
             response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher
         ("Pages/MostrarPro.jsp");
-        DesproductosServiceimpl service = new DesproductosServiceimpl();
-        List<Desproductos> ListaPro = service.obtenerRegistros();
+        service2 = new DesproductosServiceimpl();
+        List<Desproductos> ListaPro = service2.obtenerRegistros();
         request.setAttribute("ListaPro", ListaPro);
         dispatcher.forward(request, response);
     }
@@ -241,6 +237,34 @@ public class EditarUsuarioServlet extends HttpServlet {
                 getParameter("codigo")));
         service1.eliminarRegistroP(pro);
         List<Productos> ListaPro = this.service1.obtenerRegistros();
+        request.setAttribute("ListaPro", ListaPro);
+        dispatcher.forward(request, response);
+    }
+    
+    
+    protected void agregarPro(HttpServletRequest request, HttpServletResponse 
+            response) throws ServletException, IOException {
+         RequestDispatcher dispatcher = request.getRequestDispatcher
+        ("Pages/AgregarProd.jsp");
+        dispatcher.forward(request, response);
+    }
+    
+    
+    protected void crearPro(HttpServletRequest request, HttpServletResponse 
+            response) throws ServletException, IOException {
+            service2 = new DesproductosServiceimpl();        
+        Desproductos d = new Desproductos();
+        d.setNomProducto(request.getParameter("nomPro"));
+        d.setDescripcion(request.getParameter("desPro"));
+        d.setPrecio(Integer.parseInt(request.getParameter("precioPro")));
+        d.setImagen("Resourses/images/" + request.getParameter("imagenPro"));
+        service2 = new DesproductosServiceimpl();
+        service2.crearRegistro(d);
+        RequestDispatcher dispatcher = request.getRequestDispatcher
+        ("EditarUsuarioServlet?action=mostrarPro");
+        dispatcher.forward(request, response);
+        this.service2 = new DesproductosServiceimpl();
+        List<Desproductos> ListaPro = service2.obtenerRegistros();
         request.setAttribute("ListaPro", ListaPro);
         dispatcher.forward(request, response);
     }

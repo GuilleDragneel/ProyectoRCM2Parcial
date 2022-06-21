@@ -10,6 +10,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+<%-- 
+    Llamada a todos los recursos a ocupar
+--%>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8, initi
               al-scale=1.0">
         <style rel="stylesheet">
@@ -22,6 +25,9 @@
         <link rel="Stylesheet" 
              href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
+<%-- 
+    Menu principal
+--%>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">0
@@ -80,14 +86,18 @@
         <br>
         <br>
     </section>
+<%-- 
+    Lista de usarios
+--%>
     <div class="container-fluid">
         <section>
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <c:forEach var="usuario" items="${ListaUsuario}">
+                        
                         <div class="card-group text-white bg-dark mb-3" style=
                              "width: 18rem;">
-                            <div class="card-body">
+                            <div class="card-body"><i class="fa fa-user"></i>
                                 <h5 class="card-title">Usuario</h5>
                             </div>  
                             <div class="card-body">
@@ -137,6 +147,9 @@ Edad:<c:out value="${usuario.edad}"></c:out></p>
     <br>
     <br>
     <br>
+<%-- 
+    Pie de página
+--%>
     <div class="container-fluid">
         <div class="row p-5 pb-2 bg-dark text-white">
             <div class="col-xs-12 col-md-6 col-lg-3">

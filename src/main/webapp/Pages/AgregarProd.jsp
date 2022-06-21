@@ -78,74 +78,64 @@
 <%-- 
     Formulario para ingregar usuario
 --%>
-        <form action="EditarUsuarioServlet?action=crear" method="POST">
+<br>
+<br>
+<br>
+<br>
+        <form action="EditarUsuarioServlet?action=crearPro" method="POST">
             <div class="container-md">
                 <div class="mb-3">
-                    <span class="input-group-addon"><i class="fa fa-user"></i>
+             <span class="input-group-addon"><i class="fa fa-shopping-cart"></i>
                     </span>
                     <label for="exampleInputEmail1"
-                         class="form-label">Nombre Usuario</label>
-                    <input name="nombreUsuario" value="juan1" type="text" 
-                           class="form-control" 
+                         class="form-label">Nombre Producto</label>
+                    <input name="nomPro" type="text" class="form-control" 
                            aria-label="Sizing example input" 
                           aria-describedby="inputGroup-sizing-default" required>                    
-             <div id="usuarioname" class="form-text">Solo letras y numeros</div>
+             <div id="nom" class="form-text">Solo letras</div>
                 </div>
                 <div class="mb-3">
-                    <span class="input-group-addon"><i class="fa fa-user"></i>
+                   <span class="input-group-addon"><i class="fa fa-cutlery"></i>
                     </span>
-                    <label for="exampleInputEmail1" class="form-label">Nombre
+                  <label for="exampleInputEmail1" class="form-label">Descripción
                     </label>
-                    <input name="nombre" value="juan" type="text"
-                           class="form-control" 
+                    <input name="desPro" type="text" class="form-control" 
                            aria-label="Sizing example input" 
                           aria-describedby="inputGroup-sizing-default" required>                                  
-                    <div id="nombre" class="form-text">Solo letras</div>
-                </div>
-                <div class="mb-3">
-                    <span class="input-group-addon"><i class="fa fa-key"></i>
-                    </span>
-                    <label for="exampleInputPassword1" 
-                           class="form-label">Contraseña</label>
-                    <input name="contraseña" value="123" type="password" 
-                       class="form-control" id="exampleInputPassword1" required>
-                    <div id="contraseña" class="form-text">Solo letras y numeros
-                    </div>
-                </div>
-                <span class="input-group-addon"><i class="fa fa-venus-mars"></i>
-                </span>
-                <label for="exampleInputPassword1" class="form-label">Sexo
-                </label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" 
-                           id="hombre" value="hombre" checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Hombre
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sexo" 
-                           id="mujer" value="mujer">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Mujer
-                    </label>
+ <div id="des" class="form-text">Solo letras - No mas de 100 caracteres</div>
                 </div>
                 <div class="mb-3">
                     <span class="input-group-addon">
-                        <i class="fa fa-hourglass-end"></i></span>
-                    <label for="exampleInputEmail1" class="form-label">Edad
+                        <i class="fa fa-money"></i></span>
+                    <label for="exampleInputEmail1" class="form-label">Precio
                     </label>
-                    <input name="edad" value="21" type="number" 
-                           required pattern="[0-9]{1,}" min="18" max="99"
+                    <input name="precioPro" type="number" 
+                           required pattern="[0-9]{1,}" min="100" max="1000000"
                            class="form-control" aia-label="Sizing example input" 
                          aria-describedby="in putGroup-sizing-default" required>                    
-                    <div id="emailHelp" class="form-text">Mayor que 18</div>
                 </div>
-                <button class="btn btn-dark" >Crear</button>
+                <div class="mb-3">
+                    <span class="input-group-addon">
+                        <i class="fa fa-file"></i></span>
+              <label for="exampleInputEmail1" class="form-label">Escoger archivo
+                    </label>
+                   <input type="file" name="imagenPro" id="attachment" required>
+                </div>
+                
+                <button class="btn btn-dark">Crear</button>
             </div>
             <br>
             <br>
         </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <%-- 
     Pie de página
 --%>

@@ -69,6 +69,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" 
+             href="EditarUsuarioServlet?action=agregarPro">Agregar Producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" 
                    href="EditarUsuarioServlet?action=mostrarPedi">Ver pedido</a>
                         </li>
                     </ul>
