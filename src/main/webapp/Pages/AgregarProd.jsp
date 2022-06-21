@@ -76,7 +76,7 @@
         </nav>
     <body>
 <%-- 
-    Formulario para ingregar usuario
+    Formulario para agregar producto
 --%>
 <br>
 <br>
