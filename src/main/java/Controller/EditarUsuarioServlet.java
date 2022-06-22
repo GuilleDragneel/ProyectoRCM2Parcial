@@ -240,8 +240,9 @@ public class EditarUsuarioServlet extends HttpServlet {
         request.setAttribute("ListaPro", ListaPro);
         dispatcher.forward(request, response);
     }
-    
-    
+/*
+    Método para listar el producto agregado
+*/
     protected void agregarPro(HttpServletRequest request, HttpServletResponse 
             response) throws ServletException, IOException {
          RequestDispatcher dispatcher = request.getRequestDispatcher
@@ -249,7 +250,9 @@ public class EditarUsuarioServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
     
-    
+/*
+    Método de crear producto
+*/  
     protected void crearPro(HttpServletRequest request, HttpServletResponse 
             response) throws ServletException, IOException {
             service2 = new DesproductosServiceimpl();        

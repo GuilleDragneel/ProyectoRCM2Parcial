@@ -6,10 +6,10 @@
 <hibernate-configuration>
     <session-factory>
 	
-        <property name="connection.url">jdbc:postgresql://localhost/rcm</property> <!-- BD Mane -->
+        <property name="connection.url">jdbc:postgresql://10.100.25.67:5432/rcm</property> <!-- BD Mane -->
         <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
-        <property name="connection.username">postgres</property> <!-- DB User -->
-        <property name="connection.password">guille</property> <!-- DB Password -->
+        <property name="connection.username">webadmin</property> <!-- DB User -->
+        <property name="connection.password">eDl1rIu1eR</property> <!-- DB Password -->
    		
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
         <property name="hibernate.connection.pool_size">1</property>
