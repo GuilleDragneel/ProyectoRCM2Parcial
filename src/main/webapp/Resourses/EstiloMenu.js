@@ -4,7 +4,7 @@
  Fecha actualizacion= 06/06/2022
  Descripcion= Documento de funciones javascript
  */
-
+/*Funcion total*/
 function Total(id) {
     $("#tot" + id).val($("#cant" + id).val() * $("#price" + id).val());
 }

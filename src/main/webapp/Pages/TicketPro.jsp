@@ -10,6 +10,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+<%-- 
+    Llamada a todos los recursos a ocupar
+--%>
         <meta http-equiv="Content-Type" 
               content="text/html; charset=UTF-8, initial-scale=1.0">
         <script src="Resourses/EstiloMenu.js"></script>  
@@ -22,6 +25,9 @@
               href="webjars/fontawesome/4.7.0/css/font-awesome.min.css"> 
     </head>
     <body>
+<%-- 
+    Menu principal
+--%>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"></a>
@@ -69,6 +75,9 @@
         <br>
         <br>
         <br>
+<%-- 
+    Listado de los productos agregados
+--%>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <c:forEach var="productos" items="${ListaPro}"> 
@@ -109,6 +118,9 @@ class="btn btn-light">Eliminar</a>
         <br>
         <br>
         <br>
+<%-- 
+    Pie de página
+--%>
         <div class="container-fluid">
             <div class="row p-5 pb-2 bg-dark text-white">
                 <div class="col-xs-12 col-md-6 col-lg-3">
